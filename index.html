@@ -227,39 +227,59 @@
         <div class="container">
             <h2 class="section-title">Technical Skills</h2>
 
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h4>AI, Deep Learning & Computer Vision</h4>
-                    <ul class="skill-list">
-                        <li>Expertise: Object Detection & Tracking, SAM 3, Human Pose Estimation, OCR, Anomaly Detection, ANPR</li>
-                        <li>Libraries: YOLO (v5-26), OpenCV, PaddleOCR, PyTorch, TensorFlow/Keras, Scikit-learn</li>
-                    </ul>
+            <div class="accordion" id="skills-accordion">
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" aria-expanded="true" aria-controls="skill-panel-1">
+                        <span class="accordion-title">AI, Deep Learning & Computer Vision</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content" id="skill-panel-1" role="region" aria-labelledby="skill-panel-1">
+                        <ul class="skill-list">
+                            <li>Expertise: Object Detection & Tracking, SAM 3, Human Pose Estimation, OCR, Anomaly Detection, ANPR</li>
+                            <li>Libraries: YOLO (v5-26), OpenCV, PaddleOCR, PyTorch, TensorFlow/Keras, Scikit-learn</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Generative AI & Multimodal Systems</h4>
-                    <ul class="skill-list">
-                        <li>Vision-Language Models: Qwen3-7B-Instruct, InternVL3-8B, Molmo-7B, LLaVA-NeXT, MiniCPM, Phi, Ovis1.6</li>
-                        <li>LLM Orchestration: LangChain, LlamaIndex, OpenAI SDK, AWS Bedrock</li>
-                        <li>Methodologies: RAG, LoRA, QLoRA, Advanced Prompt Engineering</li>
-                    </ul>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="skill-panel-2">
+                        <span class="accordion-title">Generative AI & Multimodal Systems</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content" id="skill-panel-2" role="region" aria-labelledby="skill-panel-2">
+                        <ul class="skill-list">
+                            <li>Vision-Language Models: Qwen3-7B-Instruct, InternVL3-8B, Molmo-7B, LLaVA-NeXT, MiniCPM, Phi, Ovis1.6</li>
+                            <li>LLM Orchestration: LangChain, LlamaIndex, OpenAI SDK, AWS Bedrock</li>
+                            <li>Methodologies: RAG, LoRA, QLoRA, Advanced Prompt Engineering</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Infrastructure, DevOps & Edge Computing</h4>
-                    <ul class="skill-list">
-                        <li>Cloud: AWS Lambda, API Gateway, Amazon Rekognition, AWS S3</li>
-                        <li>Deployment: Docker, FastAPI, Git CI/CD, Redis, GitOps Agent</li>
-                        <li>Edge Hardware: NVIDIA Jetson, ARM Cortex, Raspberry Pi, FFmpeg, GStreamer</li>
-                    </ul>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="skill-panel-3">
+                        <span class="accordion-title">Infrastructure, DevOps & Edge Computing</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content" id="skill-panel-3" role="region" aria-labelledby="skill-panel-3">
+                        <ul class="skill-list">
+                            <li>Cloud: AWS Lambda, API Gateway, Amazon Rekognition, AWS S3</li>
+                            <li>Deployment: Docker, FastAPI, Git CI/CD, Redis, GitOps Agent</li>
+                            <li>Edge Hardware: NVIDIA Jetson, ARM Cortex, Raspberry Pi, FFmpeg, GStreamer</li>
+                        </ul>
+                    </div>
                 </div>
 
-                <div class="skill-category">
-                    <h4>Systems, Languages & Agentic Development</h4>
-                    <ul class="skill-list">
-                        <li>AI-Driven Development: Cursor, Claude Code, Model Context Protocol (MCP)</li>
-                        <li>Languages: Python (Core Specialist), C, MATLAB</li>
-                    </ul>
+                <div class="accordion-item">
+                    <button type="button" class="accordion-trigger" aria-expanded="false" aria-controls="skill-panel-4">
+                        <span class="accordion-title">Systems, Languages & Agentic Development</span>
+                        <span class="accordion-icon" aria-hidden="true"></span>
+                    </button>
+                    <div class="accordion-content" id="skill-panel-4" role="region" aria-labelledby="skill-panel-4">
+                        <ul class="skill-list">
+                            <li>AI-Driven Development: Cursor, Claude Code, Model Context Protocol (MCP)</li>
+                            <li>Languages: Python (Core Specialist), C, MATLAB</li>
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>

@@ -38,3 +38,38 @@ dropdownMenu.addEventListener('mouseleave', () => {
   dropdownToggle.classList.remove('nav-item-active');
   dropdownMenu.style.display = 'none';
 });
+
+// Accordion (Skills section) — accessible expand/collapse
+const accordionTriggers = document.querySelectorAll('.accordion-trigger');
+
+function setAccordionPanel(trigger, expanded) {
+  const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+  trigger.setAttribute('aria-expanded', String(expanded));
+  if (expanded) {
+    panel.classList.add('open');
+    panel.style.maxHeight = panel.scrollHeight + 'px';
+  } else {
+    panel.classList.remove('open');
+    panel.style.maxHeight = '0px';
+  }
+}
+
+accordionTriggers.forEach(trigger => {
+  // initialize the first panel as open per its aria-expanded attribute
+  setAccordionPanel(trigger, trigger.getAttribute('aria-expanded') === 'true');
+
+  trigger.addEventListener('click', () => {
+    const isOpen = trigger.getAttribute('aria-expanded') === 'true';
+    setAccordionPanel(trigger, !isOpen);
+  });
+});
+
+// Keep open panel height correct on resize
+window.addEventListener('resize', () => {
+  accordionTriggers.forEach(trigger => {
+    if (trigger.getAttribute('aria-expanded') === 'true') {
+      const panel = document.getElementById(trigger.getAttribute('aria-controls'));
+      panel.style.maxHeight = panel.scrollHeight + 'px';
+    }
+  });
+});

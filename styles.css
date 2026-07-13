@@ -456,6 +456,122 @@ body {
     font-weight: 600;
 }
 
+/* Accordion (Skills) */
+.accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.accordion-item {
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: var(--transition);
+}
+
+.accordion-item:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-md);
+}
+
+.accordion-trigger {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding: 24px 28px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: var(--font-main);
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    text-align: left;
+    transition: var(--transition);
+}
+
+.accordion-trigger:hover {
+    color: var(--primary-color);
+}
+
+.accordion-title {
+    position: relative;
+}
+
+.accordion-title::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    border-radius: 2px;
+    margin-top: 8px;
+    transition: width 0.3s ease;
+}
+
+.accordion-trigger:hover .accordion-title::after,
+.accordion-trigger[aria-expanded="true"] .accordion-title::after {
+    width: 60px;
+}
+
+.accordion-icon {
+    flex-shrink: 0;
+    position: relative;
+    width: 20px;
+    height: 20px;
+    transition: transform 0.3s ease;
+}
+
+.accordion-icon::before,
+.accordion-icon::after {
+    content: '';
+    position: absolute;
+    background: var(--primary-color);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.accordion-icon::before {
+    top: 9px;
+    left: 0;
+    width: 20px;
+    height: 2px;
+}
+
+.accordion-icon::after {
+    top: 0;
+    left: 9px;
+    width: 2px;
+    height: 20px;
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon {
+    transform: rotate(180deg);
+}
+
+.accordion-trigger[aria-expanded="true"] .accordion-icon::after {
+    opacity: 0;
+}
+
+.accordion-content {
+    overflow: hidden;
+    max-height: 0;
+    padding: 0 28px;
+    transition: max-height 0.3s ease;
+}
+
+.accordion-content.open {
+    padding-bottom: 24px;
+}
+
+.accordion-content .skill-list {
+    padding-top: 8px;
+}
+
 /* Education Section */
 .education-item {
     background: var(--bg-primary);
