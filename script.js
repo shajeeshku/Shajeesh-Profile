@@ -21,8 +21,7 @@ const observer = new IntersectionObserver(entries => {
 }, { threshold: [0.1] });
 
 document.querySelectorAll('.section').forEach(section => {
-  const sectionElement = section.getRootNode().host;
-  observer.observe(sectionElement);
+  observer.observe(section);
 });
 
 // Projects dropdown functionality
