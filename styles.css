@@ -575,6 +575,11 @@ body {
     transition: max-height 0.3s ease;
 }
 
+/* CSS fallback: if JS is slow/blocked, any panel marked open still shows */
+.accordion-trigger[aria-expanded="true"] + .accordion-content {
+    max-height: 1000px;
+}
+
 .accordion-content.open {
     padding-bottom: 24px;
 }
@@ -675,6 +680,21 @@ body {
     font-size: 0.9rem;
 }
 
+.publication-link {
+    display: inline-block;
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.publication-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
+}
+
 /* Certifications */
 .certifications-grid {
     display: grid;
@@ -696,6 +716,20 @@ body {
 .cert-item:hover {
     box-shadow: var(--shadow-md);
     border-color: var(--primary-color);
+}
+
+.cert-link {
+    margin-top: 8px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.cert-link:hover {
+    color: var(--accent-color);
+    text-decoration: underline;
 }
 
 .cert-year {
